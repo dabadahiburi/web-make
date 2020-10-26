@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+    <title>Scroll To See Magic Again</title>
+</head>
+<body>
+    <section class="banner">
+        <video src="video.mp4" autoplay muted loop></video>
+    </section>
+    <div class="container">
+        <h2>Scroll To See Magic Again</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere obcaecati recusandae minima consequuntur omnis, molestiae, sapiente porro nesciunt ut suscipit dolor aspernatur esse, nulla officia quis cum dolorem quia soluta?<br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ab animi id? Quibusdam culpa at non, expedita ea voluptates neque sequi repellat nesciunt aut, voluptatum unde. Et accusamus natus velit?<br><br>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, aliquam officiis accusantium ratione itaque tempora sit cupiditate hic eum reiciendis aut recusandae delectus rerum impedit illo ex corrupti molestias suscipit.<br>
+        </p>
+        <script>
+            const banner =document.querySelector('.banner');
+            window.addEventListener('scroll',function(){
+                const value =800 -window.scrollY;
+                banner.style.clipPath = "circle("+ value +"px at center center)";
+            })
+        </script>
+    </div>
+</body>
+</html>
