@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mouse botton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#" class="btn"><span></span>Button</a>
+  <a href="#" class="btn"><span></span>Button</a>
+  <script src="http://code.jquery.com/jquery-3.5.1.js">
+  </script>
+  <script>
+    $(document).ready(function(e){
+      $('.btn').on('mouseover',function(e){
+      x = e.pageX - $(this).offset().left;
+      y = e.pageY - $(this).offset().top;
+      $(this).find('span').css({top:y, left:x})
+      })
+      $('.btn').on('mouseout',function(e){
+      x = e.pageX - $(this).offset().left;
+      y = e.pageY - $(this).offset().top;
+      $(this).find('span').css({top:y, left:x})
+      })
+    })
+  </script>
+</body>
+</html>
